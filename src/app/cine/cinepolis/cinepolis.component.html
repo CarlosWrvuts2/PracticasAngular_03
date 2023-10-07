@@ -1,4 +1,4 @@
-<div class="container">
+<!---<div class="container">
     <h2>Cinepolissssss</h2>
 
     <form action="/action_page.php">
@@ -28,4 +28,189 @@
 
 
 <br><br><br><br><p>Nota</p>
+</div>--->
+
+<!--
+    
+<div class="container">
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <form [formGroup]="boletosForm" (ngSubmit)="comprarBoletos()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" id="nombre" formControlName="nombre" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="cantidadBoletos" class="form-label">Cantidad de Boletos:</label>
+            <input type="number" id="cantidadBoletos" formControlName="cantidadBoletos" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="cantidadCompradores" class="form-label">Cantidad de Compradores:</label>
+            <input type="number" id="cantidadCompradores" formControlName="cantidadCompradores" class="form-control">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" id="tarjetaCineco" formControlName="tarjetaCineco" class="form-check-input">
+            <label for="tarjetaCineco" class="form-check-label">Tienes la Tarjeta. Selecciona el Campo para Un Descuento</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Comprar</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="row mt-4" *ngIf="compraRealizada">
+      <div class="col-md-6">
+        <table class="table">
+            <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad de Boletos</th>
+              <th>Valor a Pagar</th>
+            </tr>
+            </thead>
+        <tbody>
+            <tr>
+              <td>{{ nombre }}</td>
+              <td>{{ cantidadBoletos }}</td>
+              <td>{{ valorPagar | currency }}</td>
+            </tr>
+        </tbody>
+        </table>
+       </div>
+    </div>
+  </div>
+
+
+<div class="mt-4 text-center">
+            <img src="../static/img/logo_cinepolis.png" alt="auto">
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-primary text-center">Entradas</h2>
+                    </div>
+                    <div class="card-body">
+                        <form class="form" action="/resultadoCinepolis" method="post">
+                            <input name="txtNombre" class="form-control mt-4" type="text" placeholder="Nombre" value="">
+                            <input name="txtCantidad" class="form-control mt-4" type="number" placeholder="Cantidad de compradores" value="">
+                            <div class="mt-4">
+                                <label>Tarjeta de cine:</label>
+                                <input id="rbtnTarjeta" class="mx-2" name="rgroupTarjeta" type="radio" value="1" checked>Si
+                                <input id="rbtnTarjeta" class="mx-2" name="rgroupTarjeta" type="radio" value="2">No
+                            </div>
+                            <input name="txtCantidadBoletos" class="form-control mt-4" type="number" placeholder="Cantidad de boletos" value="">
+                            <div class="mt-4 text-center">
+                                <button type="submit" class="btn btn-outline-success">
+                                    Procesar
+                                </button>
+                                <button class="btn btn-outline-danger" onclick="">Salir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-primary text-center">Salidas</h2>
+                    </div>
+                    <div class="card-body">
+                        {%block content%}
+                
+                        {%endblock%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+-->
+
+<div class="banner">
+    <img src="https://canje.cinepolis.com/imgs/CinepolisExchange/C01-LOGO.png" alt="Banner" class="img-fluid">
 </div>
+
+<div class="container content-container">
+   
+    <div class="container">
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-primary text-center">Comprar Boletos</h2>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="boletosForm" (ngSubmit)="comprarBoletos()">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" id="nombre" formControlName="nombre" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cantidadBoletos" class="form-label">Cantidad de Boletos:</label>
+                                <input type="number" id="cantidadBoletos" formControlName="cantidadBoletos" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cantidadCompradores" class="form-label">Cantidad de Compradores:</label>
+                                <input type="number" id="cantidadCompradores" formControlName="cantidadCompradores" class="form-control">
+                            </div>
+                            <div class="card-header">
+                                <h2 class="text-primary text-center">Tarjeta CINECO</h2>
+                            </div>
+                            <div class="mb-3 form-check"><h3></h3>
+                                <div class="form-check">
+                                    <input type="radio" id="tarjetaCinecoSi" formControlName="tarjetaCineco" value="Si" class="form-check-input">
+                                    <label for="tarjetaCinecoSi" class="form-check-label">Si</label>
+                                </div>
+                                <div class="form-check">
+                                   <input type="radio" id="tarjetaCinecoNo" formControlName="tarjetaCineco" value="No" class="form-check-input">
+                                    <label for="tarjetaCinecoNo" class="form-check-label">No</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Comprar</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+
+    
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-primary text-center">Detalle de la Compra</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mt-4" *ngIf="compraRealizada">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Cantidad de Boletos</th>
+                                            <th>Valor a Pagar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ nombre }}</td>
+                                            <td>{{ cantidadBoletos }}</td>
+                                            <td>{{ valorPagar | currency }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</div>
+
+

@@ -1,0 +1,20 @@
+
+/* Estilos para el banner */
+.banner {
+  background-color: #ffffff; /* Color de fondo del banner */
+  text-align: center; /* Centrar el contenido dentro del banner */
+  padding: 5px 0; /* Espaciado interno superior e inferior */
+  scale: 100%;
+}
+
+/* Estilos para la imagen dentro del banner */
+.banner img {
+  max-width: 30%; /* Ajustar la imagen al ancho del contenedor */
+  height: auto; /* Mantener la relación de aspecto de la imagen */
+}
+
+/* Estilos para el contenido principal */
+.content-container {
+  background-color: #132069; /* Color de fondo del contenido principal */
+  padding: 20px; /* Espaciado interno */
+}

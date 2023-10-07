@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 import{ FormsModule } from '@angular/forms';
 import{MatButtonModule} from '@angular/material/button'
@@ -25,7 +26,8 @@ import { CinepolisComponent } from './cine/cinepolis/cinepolis.component';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
